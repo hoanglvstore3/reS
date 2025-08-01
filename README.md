@@ -1,7 +1,5 @@
 # Rabid Admin Frontend
 
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
-
 ## Core Technologies
 
 - **Next.js 15.2.0** - React framework for production

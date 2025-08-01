@@ -1,103 +1,80 @@
-# Rabid Admin Frontend
+<p align="center">
+  <a href="http://var-meta.com/" target="blank"><img src="https://www.var-meta.com/images/logo_light.svg" width="200" alt="Var meta Logo" /></a>
+</p>
 
-## Core Technologies
+# 🚀 Rabid Admin Frontend
 
-- **Next.js 15.2.0** - React framework for production
-- **React 19.0.0** - JavaScript library for building user interfaces
-- **TypeScript 5** - Typed superset of JavaScript
-- **TailwindCSS 3.4.1** - Utility-first CSS framework
-- **Apollo Client** - GraphQL client with caching
-- **Zustand** - State management library
-- **TanStack Query (React Query)** - Data fetching and caching
-- **Radix UI** - Low-level UI primitives
-- **Biome** - Fast formatter and linter
-- **React Hook Form** - Forms with easy validation
-- **Zod** - TypeScript-first schema validation
+> A modern and powerful admin interface providing an optimal management experience for the Rabid system with intuitive design and advanced features.
 
-## Installation
+## 🛠️ Core Technologies
 
-1. **Clone the repository**
-   ```bash
-   git clone <repository-url>
-   cd admin-fe
-   ```
+- **Frontend**: Next.js + React + TypeScript
+- **Styling**: TailwindCSS with Radix UI components
+- **Data Management**: Apollo Client + TanStack Query + Zustand
+- **Form Handling**: React Hook Form with Zod validation
 
-2. **Install dependencies**
-   ```bash
-   pnpm install
-   ```
+## 📦 Installation
 
-   > **Note:** This project uses `pnpm` as the package manager. Make sure you have pnpm installed globally:
-   ```bash
-   npm install -g pnpm
-   ```
+### Prerequisites
+- Node.js (v18+)
+- pnpm package manager
 
-## Configuration
+### Setup
 
-1. **Environment Variables**
-   - Copy the example configuration file (if available)
-   - Set up your environment variables for API endpoints, authentication, etc.
-
-2. **Node.js Version**
-   - Ensure you have Node.js >= 18 installed
-   - Check your version: `node --version`
-
-## Development
-
-**Run development server:**
+1. **Clone and install dependencies**
 ```bash
-pnpm dev
+git clone <repository-url>
+cd admin-fe
+pnpm install
+```
+
+2. **Environment configuration**
+```bash
+# Copy environment template
+cp .env.example .env
+
+# Configure your environment variables:
+# - API endpoints
+# - Authentication providers
+# - External service keys
+```
+
+## 🚀 Running the Application
+
+### Development Mode
+
+```bash
+# Development server (watch mode)
+pnpm run dev
+
+# Type checking
+pnpm run type-check
+
+# Linting and formatting
+pnpm run lint
+pnpm run format:check
 ```
 
 The application will start on [http://localhost:3000](http://localhost:3000).
 
-**Other development commands:**
-```bash
-# Type checking
-pnpm type-check
-
-# Linting
-pnpm lint
-pnpm lint:fix
-
-# Formatting
-pnpm format:check
-pnpm format:fix
-```
-
-## Production
-
-**Build for production:**
-```bash
-pnpm build
-```
-
-**Start production server:**
-```bash
-pnpm start
-```
-
-## Getting Started
-
-First, run the development server:
+### Production Mode
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+# Build the application
+pnpm run build
+
+# Start production server
+pnpm run start
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🏁 Getting Started
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+1. Follow the [Installation](#-installation) steps
+2. Run the development server using commands in [Running the Application](#-running-the-application)
+3. Open [http://localhost:3000](http://localhost:3000) to view the application
+4. Start editing `app/page.tsx` - the page auto-updates as you edit
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
+## 📚 Learn More
 
 To learn more about Next.js, take a look at the following resources:
 
@@ -106,7 +83,7 @@ To learn more about Next.js, take a look at the following resources:
 
 You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
+## 🌐 Deploy on Vercel
 
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 

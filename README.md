@@ -1,4 +1,4 @@
-<p align="center">
+<p align="left">
   <a href="http://var-meta.com/" target="blank"><img src="https://www.var-meta.com/images/logo_light.svg" width="200" alt="Var meta Logo" /></a>
 </p>
 

@@ -2,21 +2,24 @@
   <a href="http://var-meta.com/" target="blank"><img src="https://www.var-meta.com/images/logo_light.svg" width="200" alt="Var meta Logo" /></a>
 </p>
 
-# 🚀 Rabid Admin Frontend
+# 🚀 Rabid Admin Backend
 
-> A modern and powerful admin interface providing an optimal management experience for the Rabid system with intuitive design and advanced features.
+> A modern and powerful backend API service providing comprehensive management capabilities for the Rabid system with robust architecture and advanced features.
 
 ## 🛠️ Core Technologies
 
-- **Frontend**: Next.js + React + TypeScript
-- **Styling**: TailwindCSS with Radix UI components
-- **Data Management**: Apollo Client + TanStack Query + Zustand
-- **Form Handling**: React Hook Form with Zod validation
+- **Backend**: NestJS + TypeScript + Express
+- **Database**: PostgreSQL with TypeORM
+- **Authentication**: JWT with Redis sessions
+- **File Handling**: Multer with cloud storage
+- **Queue Management**: BullMQ for background job processing
 
 ## 📦 Installation
 
 ### Prerequisites
 - Node.js (v18+)
+- PostgreSQL (v14+)
+- Redis (v6+)
 - pnpm package manager
 
 ### Setup
@@ -24,7 +27,7 @@
 1. **Clone and install dependencies**
 ```bash
 git clone <repository-url>
-cd admin-fe
+cd rabid/admin-be
 pnpm install
 ```
 
@@ -34,9 +37,11 @@ pnpm install
 cp .env.example .env
 
 # Configure your environment variables:
-# - API endpoints
-# - Authentication providers
-# - External service keys
+# - Database connection
+# - Redis connection
+# - JWT secrets
+# - SendGrid API key
+# - File storage settings
 ```
 
 ## 🚀 Running the Application
@@ -47,15 +52,17 @@ cp .env.example .env
 # Development server (watch mode)
 pnpm run dev
 
-# Type checking
-pnpm run type-check
+# Start development server
+pnpm run start
 
-# Linting and formatting
+# Type checking
 pnpm run lint
-pnpm run format:check
+
+# Database migrations
+pnpm run migration:run
 ```
 
-The application will start on [http://localhost:3000](http://localhost:3000).
+The API will start on [http://localhost:3000](http://localhost:3000).
 
 ### Production Mode
 
@@ -64,27 +71,45 @@ The application will start on [http://localhost:3000](http://localhost:3000).
 pnpm run build
 
 # Start production server
-pnpm run start
+pnpm run start:prod
 ```
 
 ## 🏁 Getting Started
 
 1. Follow the [Installation](#-installation) steps
-2. Run the development server using commands in [Running the Application](#-running-the-application)
-3. Open [http://localhost:3000](http://localhost:3000) to view the application
-4. Start editing `app/page.tsx` - the page auto-updates as you edit
+2. Configure your database and Redis connections in `.env`
+3. Run database migrations if needed
+4. Start the development server using commands in [Running the Application](#-running-the-application)
+5. Access the API documentation at [http://localhost:3000/api](http://localhost:3000/api)
 
 ## 📚 Learn More
 
-To learn more about Next.js, take a look at the following resources:
+To learn more about NestJS, take a look at the following resources:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- [NestJS Documentation](https://docs.nestjs.com/) - learn about NestJS features and API.
+- [TypeORM Documentation](https://typeorm.io/) - database ORM documentation.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+You can check out [the NestJS GitHub repository](https://github.com/nestjs/nest) - your feedback and contributions are welcome!
 
-## 🌐 Deploy on Vercel
+## 🌐 Deployment
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+The application can be deployed using Docker:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details
+```bash
+# Build Docker image
+docker build -t rabid-admin-backend .
+
+# Run with Docker Compose
+docker-compose up -d
+```
+
+Check out the deployment scripts in the `scripts/` directory for more deployment options.
+
+## 📞 Stay in touch
+
+- Powered by - [Var Meta](https://var-meta.com)
+- Website - [https://var-meta.com](https://var-meta.com/)
+
+## 📝 License
+
+NestJS is [MIT licensed](LICENSE).
